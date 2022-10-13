@@ -27,3 +27,9 @@ Route::post('/users', [UserController::class, 'store']);
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+Route::get('/reset-password', [UserController::class, 'showReset'])->middleware('guest')->name('password.request');
+
+Route::post('/reset-password', [UserController::class, 'resetPassword'])->middleware('guest')->name('password.reset');
+
+Route::post('/forget-password', [UserController::class, 'forgetPassword'])->middleware('guest')->name('password.email');

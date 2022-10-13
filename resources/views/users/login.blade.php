@@ -4,7 +4,7 @@
           <h2 class="text-2xl font-bold uppercase mb-1">
               Login
           </h2>
-          <p class="mb-4">Log into your account to post gigs</p>
+          <p class="mb-4">Log into your account</p>
       </header>
 
       <form method="POST" action="/users/authenticate">
@@ -56,6 +56,14 @@
                   Don't have an account?
                   <a href="/register" class="text-laravel"
                       >Register</a
+                  >
+              </p>
+          </div>
+          <div class="mt-2">
+              <p>
+                  Forget your password?
+                  <a href="/reset-password" class="text-laravel"
+                      >Reset Password</a
                   >
               </p>
           </div>
